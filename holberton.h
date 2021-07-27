@@ -3,6 +3,7 @@
 
 #include <stdlib.h>
 #include <stdarg.h>
+#include <limits.h>
 
 /**
  * struct fprinter - a struct holding the
