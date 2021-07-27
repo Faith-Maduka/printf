@@ -63,6 +63,17 @@ int _print_int(int n, int *count)
 {
 	if (n < 0)
 	{
+		if (n == INT_MIN)
+		{
+			*count += _putchar('-');
+			n++;
+			n = -n;
+			if (n / 10)
+				_print_int(n / 10, count);
+			*count += _putchar((n % 10) + 1 + '0');
+			return (*count);
+		}
+
 		*count += _putchar('-');
 		n = -n;
 	}
@@ -70,5 +81,6 @@ int _print_int(int n, int *count)
 	if (n / 10)
 		_print_int(n / 10, count);
 	*count += _putchar((n % 10) + '0');
+
 	return (*count);
 }
