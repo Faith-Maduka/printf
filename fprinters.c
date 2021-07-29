@@ -17,7 +17,7 @@ int print_char(va_list args)
  *
  * Return: the length of the string, excluding null character
  */
-int print_string(va_list args)
+int print_str(va_list args)
 {
 	int count = 0;
 	char *s = va_arg(args, char *);
@@ -41,7 +41,6 @@ int print_int(va_list args)
 	int num, *count;
 
 	count = malloc(sizeof(*count));
-
 	if (!count)
 		return (-1);
 
@@ -84,3 +83,4 @@ int _print_int(int n, int *count)
 
 	return (*count);
 }
+
