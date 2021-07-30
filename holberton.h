@@ -24,7 +24,7 @@ int func_call(char, va_list);
 int _putchar(char c);
 
 int print_char(va_list);
-int print_string(va_list);
+int print_str(va_list);
 int print_int(va_list);
 int _print_int(int, int *);
 
